@@ -85,7 +85,7 @@ function ProductTable({ products, filterText, inStockOnly }) {
     </>
   );
 }
-
+// ...
 function House() {
   const [filterText, setFilterText] = useState("");
   const [inStockOnly, setInStockOnly] = useState(false);
