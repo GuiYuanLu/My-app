@@ -25,7 +25,7 @@ function SearchBar({ filterText, inStockOnly,onInStockOnlyChange,onFilterTextCha
     </>
   );
 }
-
+// sss
 function ProductRow({ product }) {
   const name = product.stocked ? (
     product.name
