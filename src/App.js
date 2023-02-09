@@ -6,6 +6,7 @@ import Gallery from "./components/demo4/Gallery.jsx";
 import Profile from "./components/demo5/Parent.jsx";
 import PackingList from './components/demo6/FlagTodo.jsx'
 import List from "./components/demo7/Scients.jsx";
+import Home from "./components/demo8/Test.jsx";
 function App() {
   return (
     <div className="App">
@@ -24,6 +25,8 @@ function App() {
       <PackingList/>
       <hr />
       <List/>
+      <hr />
+      <Home/>
     </div>
   );
 }
