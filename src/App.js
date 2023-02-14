@@ -1,13 +1,14 @@
 import Doing from "./components/demo1/TodoList.jsx";
-import  MyApp  from "./components/demo2/StateUpBefore.jsx";
-import  MyApp2  from "./components/demo2/StateUpAfter.jsx";
+import MyApp from "./components/demo2/StateUpBefore.jsx";
+import MyApp2 from "./components/demo2/StateUpAfter.jsx";
 import House from "./components/demo3/SolidList.jsx";
 import Gallery from "./components/demo4/Gallery.jsx";
 import Profile from "./components/demo5/Parent.jsx";
-import PackingList from './components/demo6/FlagTodo.jsx'
+import PackingList from "./components/demo6/FlagTodo.jsx";
 import List from "./components/demo7/Scients.jsx";
 import Home from "./components/demo8/Test.jsx";
 import Gallery2 from "./components/demo9/Two.jsx";
+import { OneAdd, ThreeAdd, SixAdd } from "./components/demo10/Add.jsx";
 
 function App() {
   return (
@@ -18,19 +19,23 @@ function App() {
       <hr></hr>
       <MyApp2 />
       <hr></hr>
-      <House/>
+      <House />
       <hr />
-      <Gallery/>
+      <Gallery />
       <hr />
-      <Profile/>
+      <Profile />
       <hr />
-      <PackingList/>
+      <PackingList />
       <hr />
-      <List/>
+      <List />
       <hr />
-      <Home/>
+      <Home />
       <hr />
-      <Gallery2/>
+      <Gallery2 />
+      <hr />
+      <OneAdd />
+      <ThreeAdd />
+      <SixAdd />
     </div>
   );
 }
