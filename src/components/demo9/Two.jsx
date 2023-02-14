@@ -97,32 +97,34 @@ const sculptureList = [
     alt: "A group of bronze hippo sculptures emerging from the sett sidewalk as if they were swimming.",
   },
 ];
+export default function Gallery2() {
+  const [index, setIndex] = useState(0);
+  const [showMore, setShowMore] = useState(false);
 
-export default function Gallery2(){
-    const [index, setIndex] = useState(0);
-    const [showmore,setShowmore] = useState(false);
+  let sculpture = sculptureList[index];
+  let hasPrev = index > 0;
+  let hasNext = index < sculptureList.length - 1;
 
-    function handleClick(i) {
-        setIndex(index+1)
-    }
-
-    function handleShowmore() {
-        setShowmore(!showmore)
-    }
-    const sculpture = sculptureList[index]
-    return(
-        <div className="gallery">
-            <button onClick={handleClick}>Next</button>
-            <h2>
-                <i>{sculpture.name}</i>
-            </h2>
-            <h3>
-                ({index+1} of {sculptureList.length})
-            </h3>
-            <button onClick={handleShowmore}>{showmore?"Show details":"Hide details"}</button>
-            <img src={sculpture.url} alt={sculpture.alt} />
-            <p>{showmore?"":sculpture.description}</p>
-        </div>
-    )
-
+  return (
+    <>
+      <button onClick={() => setIndex(index - 1)} disabled={!hasPrev}>
+        Previous
+      </button>
+      <button onClick={() => setIndex(index + 1)} disabled={!hasNext}>
+        Next
+      </button>
+      <h2>
+        <i>{sculpture.name} </i>
+        by {sculpture.artist}
+      </h2>
+      <h3>
+        ({index + 1} of {sculptureList.length})
+      </h3>
+      <button onClick={() => setShowMore(!showMore)}>
+        {showMore ? "Hide" : "Show"} details
+      </button>
+      {showMore && <p>{sculpture.description}</p>}
+      <img src={sculpture.url} alt={sculpture.alt} />
+    </>
+  );
 }
