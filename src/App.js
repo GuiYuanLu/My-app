@@ -9,6 +9,7 @@ import List from "./components/demo7/Scients.jsx";
 import Home from "./components/demo8/Test.jsx";
 import Gallery2 from "./components/demo9/Two.jsx";
 import { OneAdd, ThreeAdd, SixAdd } from "./components/demo10/Add.jsx";
+import { User, User2 } from "./components/demo11/ObjectState.jsx";
 
 function App() {
   return (
@@ -36,6 +37,10 @@ function App() {
       <OneAdd />
       <ThreeAdd />
       <SixAdd />
+      <hr />
+      <User />
+      <hr />
+      <User2 />
     </div>
   );
 }
