@@ -10,6 +10,8 @@ import Home from "./components/demo8/Test.jsx";
 import Gallery2 from "./components/demo9/Two.jsx";
 import { OneAdd, ThreeAdd, SixAdd } from "./components/demo10/Add.jsx";
 import { User, User2 } from "./components/demo11/ObjectState.jsx";
+import ShapeEditor from "./components/demo12/ArrayState.jsx";
+import ShoppingCart from "./components/demo12/ArrayState2.jsx";
 
 function App() {
   return (
@@ -41,6 +43,10 @@ function App() {
       <User />
       <hr />
       <User2 />
+      <hr />
+      <ShapeEditor />
+      <hr />
+      <ShoppingCart />
     </div>
   );
 }
