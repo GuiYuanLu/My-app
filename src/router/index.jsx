@@ -7,6 +7,7 @@ import PostLists from "../components/PostLists";
 import Post from "../components/Post";
 
 export default function Mrouter() {
+  // 1
   return (
     <>
       <nav style={{ margin: 10 }}>
