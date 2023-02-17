@@ -1,8 +1,11 @@
-import logo from "./logo.svg";
-import "./App.css";
-
+import { BrowserRouter } from "react-router-dom";
+import RouterIndex from "./router/index";
 function App() {
-  return <></>;
+  return (
+    <BrowserRouter>
+      <RouterIndex />
+    </BrowserRouter>
+  );
 }
 
 export default App;
