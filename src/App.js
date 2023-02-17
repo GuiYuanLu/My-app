@@ -1,53 +1,35 @@
-import Doing from "./components/demo1/TodoList.jsx";
-import MyApp from "./components/demo2/StateUpBefore.jsx";
-import MyApp2 from "./components/demo2/StateUpAfter.jsx";
-import House from "./components/demo3/SolidList.jsx";
-import Gallery from "./components/demo4/Gallery.jsx";
-import Profile from "./components/demo5/Parent.jsx";
-import PackingList from "./components/demo6/FlagTodo.jsx";
-import List from "./components/demo7/Scients.jsx";
-import Home from "./components/demo8/Test.jsx";
-import Gallery2 from "./components/demo9/Two.jsx";
-import { OneAdd, ThreeAdd, SixAdd } from "./components/demo10/Add.jsx";
-import { User, User2 } from "./components/demo11/ObjectState.jsx";
-import ShapeEditor from "./components/demo12/ArrayState.jsx";
-import ShoppingCart from "./components/demo12/ArrayState2.jsx";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+
+import Home from "./components/Home";
+import About from "./components/About";
+import Posts from "./components/Posts";
+import PostLists from "./components/PostLists";
+import Post from "./components/Post";
 
 function App() {
   return (
-    <div className="App">
-      <Doing />
-      <hr></hr>
-      <MyApp />
-      <hr></hr>
-      <MyApp2 />
-      <hr></hr>
-      <House />
-      <hr />
-      <Gallery />
-      <hr />
-      <Profile />
-      <hr />
-      <PackingList />
-      <hr />
-      <List />
-      <hr />
-      <Home />
-      <hr />
-      <Gallery2 />
-      <hr />
-      <OneAdd />
-      <ThreeAdd />
-      <SixAdd />
-      <hr />
-      <User />
-      <hr />
-      <User2 />
-      <hr />
-      <ShapeEditor />
-      <hr />
-      <ShoppingCart />
-    </div>
+    <Router>
+      <nav style={{ margin: 10 }}>
+        <Link to="/" style={{ padding: 5 }}>
+          Home
+        </Link>
+        <Link to="/about" style={{ padding: 5 }}>
+          About
+        </Link>
+        <Link to="/posts" style={{ padding: 5 }}>
+          Posts
+        </Link>
+      </nav>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="posts" element={<Posts />}>
+          <Route index element={<PostLists />} />
+          <Route path=":slug" element={<Post />} />
+        </Route>
+      </Routes>
+    </Router>
   );
 }
 
