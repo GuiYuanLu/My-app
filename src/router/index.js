@@ -9,14 +9,9 @@ export default function RouterIndex() {
 	return (
 		<>
 			<Routes>
-				<Route path="/" index element={<Login />} />
-				<Route path="/home" element={<Home />} />
+				{/* <Route path="/" index element={<Login />} /> */}
+				<Route path="/home" index element={<Home />} />
 			</Routes>
-
-			<Link to="/about"></Link>
-			<h1>About</h1>
-			<Link to="/home"></Link>
-			<h1>Home</h1>
 		</>
 	);
 }
