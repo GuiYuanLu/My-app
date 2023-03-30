@@ -11,6 +11,8 @@ export default function RouterIndex() {
 			<Routes>
 				{/* <Route path="/" index element={<Login />} /> */}
 				<Route path="/home" index element={<Home />} />
+				<Route path="/" index element={<Home />} />
+				<Route path="/about" index element={<About />} />
 			</Routes>
 		</>
 	);
